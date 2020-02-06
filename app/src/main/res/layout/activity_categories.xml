@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Categories">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/new_toolbar" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/toolbar2"
+        android:background="@drawable/customborder"
+        app:tabSelectedTextColor="#2979FF"
+        app:tabTextAppearance="@style/MineCustomTabText1">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Women" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ctgryPress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="men" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kids" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabs"
+        android:layout_below="@+id/tab_layout">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/background"
+                android:scaleType="fitXY"
+                android:src="@drawable/landscape2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="adidas Originals adicolors"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:freezesText="true"
+                android:text="adidas Originals adicolors"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/ViewLine"
+                android:layout_width="wrap_content"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/linearLayout"
+                android:background="@drawable/customborder" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizontal_recyclerViewCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ViewLine"
+                android:layout_margin="5dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        app:tabSelectedTextColor="#2979FF"
+        app:tabTextAppearance="@style/MineCustomTabText">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_home"
+            android:text="Home" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_catagories"
+            android:text="Catagories" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_favorite"
+            android:text="Wish List" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_refresh"
+            android:text="Refresh" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_profie"
+            android:text="My Namshi" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+</RelativeLayout>
